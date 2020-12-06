@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Fake News Detection</title>
+  
+  <link rel="stylesheet" href="static/css/main.css" />
+</head>
+
+
+
+<body 
+ class="is-preload">
+	<header id="header">
+		<h1>Fake News Detector</h1>
+		<p>A Machine learning developed by computer science student<br />
+		 that detects patterns in the language of fake news.</p>
+	</header>
+ <div class="try1">
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="news" placeholder="Replace this text with your URL." required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+    </form>
+   {{ prediction_text }}
+			 </div>
+			<script src="static/js/slide.js"></script>
+	</body>
+</html>
